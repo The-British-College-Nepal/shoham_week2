@@ -1,15 +1,20 @@
 package counter;
 
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
+
 import static org.junit.jupiter.api.Assertions.*;
+
 
 @DisplayName("Step 1: Counter Interface Contract Tests")
 public class Step1CounterTest {
+
 
     @Test
     @DisplayName("Counter is declared as an interface")
@@ -17,6 +22,7 @@ public class Step1CounterTest {
         assertTrue(Counter.class.isInterface(),
                 "Counter must be declared as an 'interface', not a class (e.g. 'public interface Counter { ... }')");
     }
+
 
     @Test
     @DisplayName("Counter declares countWords(String) returning int")
@@ -32,6 +38,7 @@ public class Step1CounterTest {
         }
     }
 
+
     @Test
     @DisplayName("Counter declares countLetters(String) returning int")
     void testCountLettersDeclaration() {
@@ -46,6 +53,7 @@ public class Step1CounterTest {
         }
     }
 
+
     @Test
     @DisplayName("Counter declares getLength(String) returning int")
     void testGetLengthDeclaration() {
@@ -59,6 +67,7 @@ public class Step1CounterTest {
             fail("Counter interface must declare: int getLength(String sentence);");
         }
     }
+
 
     @Test
     @DisplayName("Counter can be implemented as a polymorphic contract type")
