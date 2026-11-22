@@ -1,3 +1,4 @@
+
 package counter;
 
 /**
@@ -5,34 +6,32 @@ package counter;
  */
 public class WordProcessor implements Counter {
 
-    // Step 3: Encapsulated fallback state
+    // Encapsulated fallback text
     private String text = "";
 
     /**
-     * Gets the stored text.
+     * Gets the stored fallback text.
      *
      * @return the stored text
      */
     public String getText() {
-        return text;
+        return this.text;
     }
 
     /**
-     * Sets the stored text.
+     * Updates the stored fallback text.
      *
-     * @param text the text to store
+     * @param text the new fallback text
      */
     public void setText(String text) {
         this.text = text;
     }
 
     /**
-     * Counts the number of words in the given sentence.
-     * Words are separated by single spaces.
-     * If sentence is null, uses the stored text.
+     * Counts the number of words in a sentence.
      *
-     * @param sentence input string to analyse
-     * @return number of words
+     * @param sentence the input sentence
+     * @return the number of words
      */
     @Override
     public int countWords(String sentence) {
@@ -48,11 +47,10 @@ public class WordProcessor implements Counter {
     }
 
     /**
-     * Counts alphabetic letters only, ignoring spaces, punctuation, and digits.
-     * If sentence is null, uses the stored text.
+     * Counts alphabetic letters in a sentence.
      *
-     * @param sentence input string to analyse
-     * @return count of alphabetic letters
+     * @param sentence the input sentence
+     * @return the number of alphabetic letters
      */
     @Override
     public int countLetters(String sentence) {
@@ -74,11 +72,10 @@ public class WordProcessor implements Counter {
     }
 
     /**
-     * Returns the total character length of the sentence, including spaces.
-     * If sentence is null, uses the stored text.
+     * Gets the total character length of a sentence.
      *
-     * @param sentence input string to analyse
-     * @return total length
+     * @param sentence the input sentence
+     * @return the total character length
      */
     @Override
     public int getLength(String sentence) {
